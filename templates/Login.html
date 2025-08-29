@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Login.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login-container">
+        <form action="{{ url_for('login') }}" method="post">
+        <div class="login-title">Login</div>
+        <label class="login-label" for="login-user">Email ou usuário</label>
+        <div class="input-wrapper">
+            <img src="/Imgs/email-icon.png" alt="Email" class="icon-email">
+            <input class="login-input" type="text" id="login-user" name ="login-user" placeholder="Email ou usuário">
+        </div>
+        <label class="login-label" for="login-pass">Senha</label>
+        <div class="input-wrapper">
+            <img src="/Imgs/key-icon.png" alt="Senha" class="icon-senha">
+            <input class="login-input" type="password" id="login-pass" name ="login-pass" placeholder="Senha">
+        </div>
+        <button class="login-btn" onclick="window.location.href='/Index/Index/Index.html'">Entrar</button>
+        <div class="login-back-btn-div">
+            <a href="/Landingpage/IndexLanding.html" class="login-back-btn">Voltar</a>
+        </div>
+        <div class="login-account-info">
+            <a href="/Cadastro/Cadastro.html" class="account-text">Não possui uma conta?</a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

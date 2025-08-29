@@ -1,0 +1,214 @@
+body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 700;
+            background-image: url('/static/Imgs/Fundo\ Login.png');
+            background-size: cover;         /* Mostra a imagem inteira, sem cortar */
+            background-position: center 80%;  /* Centraliza no topo */
+            background-repeat: no-repeat;     /* Não repete */
+            background-color: #f5f8fa;        /* Cor de fundo caso sobren espaços */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .login-container {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31,130,238,0.18), 0 2px 12px rgba(5,38,78,0.18);
+            padding: 40px 32px 32px 32px;
+            max-width: 380px; /* diminuído de 400px para 320px */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch; /* Alinha tudo à esquerda/direita do container */
+        }
+        .login-title {
+            font-size: 3rem;
+            font-weight: 700; /* Mais grossa */
+            color: #263972;
+            margin-bottom: 32px;
+            letter-spacing: 0.5px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            text-align: center; /* Centraliza o título */
+        }
+        .login-label {
+            display: none;
+        }
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        .input-wrapper .icon-email {
+            position: absolute;
+            left: 6px;         /* diminui a distância da borda */
+            top: 50%;   
+            transform: translateY(-50%);
+            width: 35px;       /* pode diminuir um pouco o tamanho */
+            height: 24px;
+            pointer-events: none;
+            opacity: 0.7;
+            padding-left: 4px;
+        }
+
+        .input-wrapper .icon-senha {
+            position: absolute;
+            left: 6px;              /* igual ao icon-email */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;            /* ajuste para tamanho similar ao email */
+            height: 24px;
+            pointer-events: none;
+            opacity: 0.7;
+            padding-left: 9px;      /* igual ao icon-email */
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 12px 12px 12px 48px; /* diminui o padding à esquerda para aproximar o texto do ícone */
+            border-radius: 8px;
+            border: 1px solid #CFDCF4;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 400; /* fonte mais fina */
+            box-sizing: border-box;
+            background: #fff;
+            
+        }
+        .login-input:focus {
+            border: 1.5px solid #1F82EE;
+        }
+        .login-input::placeholder {
+            color: #263972;
+            opacity: 1;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-weight: 400;
+            transition: opacity 0.2s;
+        }
+
+        .login-input:focus::placeholder {
+            opacity: 0;
+        }
+        .login-btn {
+            width: 100%;
+            background: #1F82EE;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500; /* Mais fina */
+            padding: 12px 0;
+            margin-top: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+        .login-btn:hover {
+            background: #1668c7; /* Cor mais escura ao passar o mouse */
+        }
+        .login-links {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 18px;
+            align-items: center;
+        }
+        .login-link {
+            color: #1F82EE;
+            text-decoration: none;
+            font-size: 0.98rem;
+            font-weight: 700;
+            transition: text-decoration 0.2s;
+            font-family: 'Montserrat', Arial, sans-serif;
+            display: inline-block;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
+        .login-back-div {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 18px;
+            margin-bottom: 0;
+        }
+        .login-back-link {
+            color: #05264E;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            transition: color 0.2s;
+        }
+        .login-back-link:hover {
+            color: #1F82EE;
+            text-decoration: underline;
+        }
+        .login-back-btn-div {
+            width: 100%;
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .login-back-btn {
+            display: block;
+            width: 100%;
+            background: #fff;
+            color: #1F82EE; /* cor azul */
+            border: 1px solid #1F82EE;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 12px 0;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Montserrat', Arial, sans-serif;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .login-back-btn:hover {
+            background: #eaf3fb;
+            color: #1668c7;
+            border-color: #1668c7;
+        }
+        .login-account-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 18px;
+            gap: 6px;
+        }
+
+        .account-text {
+            color: #1F82EE;
+            font-size: 0.98rem;
+            font-weight: 700;
+            font-family: 'Montserrat', Arial, sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            transition: text-decoration 0.2s;
+        }
+
+        .account-text:hover {
+            text-decoration: underline;
+        }
+
+        .forgot-link {
+            margin-top: 2px;
+            font-size: 0.95rem;
+            color: #1668c7;
+        }
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 24px 8px;
+                max-width: 98vw;
+            }
+        }

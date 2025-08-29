@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #0d2d66;
+    background-image: url('/Imgs/FundoIndex.png');
+    background-size: 100vw 100vh; /* cobre toda a tela, sem cortar */
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Barra de navegação */
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 45px;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 100px;
+    
+}
+nav{
+    padding-right: 150px;
+    
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-family: poppins, sans-serif;
+    font-size: 1rem;
+    
+
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 40px;
+}
+
+
+.intro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.intro-text {
+    max-width: 490px;
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 18px; /* espaço abaixo do título */
+}
+
+.intro-text p {
+    margin: 15px 0 28px 0; /* espaço maior abaixo do texto */
+    width: 380px;
+    font-size: 1rem;
+    color: #ffffff;
+
+
+}
+
+.intro-text button {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    max-height: 60px;
+    max-width: 220px;
+    margin-bottom: 16px;
+    margin-top: 0;
+    font-size: 1.2rem;
+    padding: 16px 0;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+    border: none;
+    font-family: poppins bold, sans-serif;
+}
+
+#createBtn {
+    background-color: #0060DA;
+    color: #fff;
+    opacity: 1;
+    box-shadow: 0 2px 8px rgba(31,130,238,0.10);
+    margin-bottom: 14px; /* espaço entre os botões */
+
+}
+
+#viewBtn {
+    background: rgb(253, 253, 253); /* fundo branco translúcido */
+    border: none;
+    color: #0761c7;
+    font-weight: 500;
+    border-radius: 10px;
+    backdrop-filter: blur(6px); /* efeito de vidro */
+    -webkit-backdrop-filter: blur(6px); /* compatibilidade Safari */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#viewBtn:hover {
+    background: rgba(255, 255, 255, 0.25); /* aumenta a opacidade no hover */
+}
+
+/* Exemplo de flashcard */
+.flashcard-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard {
+    border: 2px solid #1E88E5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Abas */
+.tabs {
+    display: flex;
+    margin-top: 40px;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #BBDEFB;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tab:hover {
+    background-color: #E3F2FD;
+}
+
+.deck-info-card {
+    width: 350px;
+    min-height: 320px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(31,130,238,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+    position: relative;
+    margin-left: 20px;   /* move para a direita */
+    margin-right: 0; /* ajuste a distância da lateral direita */
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.deck-image-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: none;
+    position: relative;
+}
+
+.deck-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 16px;   /* arredonda só parte de cima */
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+
+
+
+.learndeck-tag {
+    position: absolute;
+    left: 16px;
+    bottom: 120px; /* fica exatamente na linha entre imagem e conteúdo */
+    background : #1F82EE;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 4px 10px;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+
+.deck-info-card {
+    width: 300px;
+    min-height: 320px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+    position: relative;
+    margin-left: 220px;
+    margin-bottom: 70px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+/* Fundo interno do card */
+.card-bg {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    border-bottom-left-radius: 16px;  /* arredonda só embaixo */
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;  /* arredonda só embaixo */
+    border-top-right-radius: 16px;
+    box-shadow: 0 4px 16px rgba(31,130,238,0.10);
+    z-index: 3;
+    
+}
+
+/* Carta 1 (mais ao fundo) */
+.deck-info-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(31,130,238,0.12);
+    transform: translateY(-18px) scale(0.98);
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+
+/* Carta 2 (meio) */
+.deck-info-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(31,130,238,0.12);
+    transform: translateY(-9px) scale(0.99);
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+/* Carta 3 (fundo fixo) */
+.deck-info-card .extra-card {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(31,130,238,0.12);
+    transform: translateY(-27px) scale(0.97);
+    z-index: -1;
+}
+
+/* Animação no hover */
+.deck-info-card:hover::before {
+    transform: rotate(-4deg) translate(-16px, -18px) scale(0.98);
+}
+.deck-info-card:hover::after {
+    transform: rotate(4deg) translate(16px, -9px) scale(0.99);
+}
+
+.deck-info-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Conteúdo por cima */
+.deck-image-container,
+.deck-info-content {
+    position: relative;
+    z-index: 4;
+}
+
+.deck-info-content {
+    width: 100%;
+    padding: 20px 16px 12px 16px; /* espaço extra para a tag */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.deck-title-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.deck-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #263972;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.deck-description-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    background-color: #F5E2E2;
+    border-radius: 8px;
+    padding: 4px 8px; /* diminuído */
+    min-height: 20px;
+    max-width: 200px; /* largura menor */
+}
+
+.deck-description-row .cards-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 4px;
+}
+
+.deck-description {
+    font-size: 0.95rem;
+    color: #FF7777;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+/* Novo estilo para o fundo branco da área de informações */
+.info-bg {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(31,130,238,0.10);
+    padding: 32px 32px 32px 32px;
+    max-width: 490px;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    body {
+        background-size: cover; /* cobre a tela em telas menores */
+        background-position: center center;
+    }
+    .intro {
+        flex-direction: column;
+        gap: 24px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .deck-info-card {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 350px;
+    }
+    main {
+        padding: 16px;
+    }
+    .info-bg {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-size: cover;
+        background-position: center center;
+    }
+    .intro {
+        padding-left: 8px;
+        padding-top: 12px;
+    }
+    .deck-info-card {
+        width: 100%;
+        max-width: 320px;
+    }
+    main {
+        padding: 8px;
+    }
+}

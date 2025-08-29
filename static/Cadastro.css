@@ -1,0 +1,162 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    background-image: url('/Imgs/Fundo\ Cadastro.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #f5f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(31,130,238,0.18), 0 2px 12px rgba(5,38,78,0.18);
+    padding: 40px 32px 32px 32px;
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.cadastro-title {
+        font-size: 3rem;
+            font-weight: 700; 
+            color: #263972;
+            margin-bottom: 28px;
+            letter-spacing: 0.5px;
+            font-family: 'Montserrat', Arial, sans-serif;
+            text-align: center; 
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.input-wrapper .icon-email,
+.input-wrapper .icon-user,
+.input-wrapper .icon-senha {
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 22px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.cadastro-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border-radius: 8px;
+    border: 1px solid #CFDCF4;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    background: #fff;
+    color: #263972;
+}
+
+.cadastro-input:focus {
+    border: 1.5px solid #1F82EE;
+}
+
+.cadastro-input::placeholder {
+    color: #263972;
+    opacity: 1;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    transition: opacity 0.2s;
+}
+
+.cadastro-input:focus::placeholder {
+    opacity: 0;
+}
+
+.cadastro-btn {
+    width: 100%;
+    background: #1F82EE;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 12px 0;
+    margin-top: 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.cadastro-btn:hover {
+    background: #1668c7;
+}
+
+.cadastro-back-btn-div {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro-back-btn {
+    display: block;
+    width: 100%;
+    background: #fff;
+    color: #1F82EE;
+    border: 1px solid #1F82EE;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 12px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', Arial, sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.cadastro-back-btn:hover {
+    background: #eaf3fb;
+    color: #1668c7;
+    border-color: #1668c7;
+}
+
+.cadastro-account-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 18px;
+    gap: 6px;
+}
+
+.account-text {
+    color: #263972;
+    font-size: 1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.cadastro-link {
+    color: #1F82EE;
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 700;
+    transition: text-decoration 0.2s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: inline-block;
+}

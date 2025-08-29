@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnCards</title>
+    <link rel="stylesheet" href="decks.css">
+</head>
+<body>
+    <a href="/Index/Index/Index.html" class="learn-master-title-link">
+        <h1 class="learn-master-title">
+            Learn<br>
+            <span class="master-thin">Master</span>
+        </h1>
+    </a>
+    <main>
+        <div class="main-learncards glass-bg">
+            <div class="main-title">Meus Learncards</div>
+            <div class="deck-tools-row">
+                <input type="text" class="deck-search-input" id="deckSearch" placeholder="Buscar pelo nome do deck...">
+                <button type="button" class="deck-btn" id="editDeckBtn">Editar Decks</button>
+                <button type="button" class="deck-btn delete" id="apagarBtn">Apagar Decks</button>
+            </div>
+            <div class="deck-folder-list" id="deckFolderList">
+                <button class="study-btn" title="Estudar Deck">
+                    <img src="/Imgs/replay.png" alt="Estudar Deck">
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="decks.js"></script>
+</body>
+</html>

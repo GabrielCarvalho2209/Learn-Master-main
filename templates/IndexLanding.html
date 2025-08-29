@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='IndexLanding.css') }}">
+
+
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=
+Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+ rel="stylesheet">
+    <link rel="icon" href="/Imgs/favicon.png" type="image/png">
+    <meta name="description" content="Learn Master - Método FlashCards para uma aprendizagem eficaz.">
+    <meta name="keywords" content="Learn Master, FlashCards, aprendizagem, educação, memorização, estudo">
+    <meta name="author" content="Learn Master Team">
+</head>
+
+<body>
+<section class="parte1">
+<header>
+    <nav>
+
+    <div class="Logoweb">
+
+        <h1 class="Learn">
+            Learn </h1>
+            <h1 class="Master">
+            Master
+        </h1>
+</div>
+        <ul class="navbar">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#interesses">Interesses</a></li>
+            <li><a href="#flashcards">FlashCards</a></li>
+            <li><a href="{{ url_for('login') }}" class="login">Login</a></li>
+        </ul>
+
+</header>
+
+
+
+    <div class="hero-content">
+        <h1>Método FlashCards</h1>
+        <h1>para uma aprendizagem eficaz.</h1>
+        <div class="botao">
+        <a href="/Cadastro/Cadastro.html" class="btnland">Começar agora</a>
+        </div>
+    </div>
+</section>
+
+<section class="parte2" id="sobre">
+  <div class="contpart2">
+    <div class="contpart2-texto">
+      <h1 class="sobre">Sobre</h1>
+      <h2 class="sobrelearn">Learn Master</h2>
+      <p>Na Learn Master, contamos com uma equipe multidisciplinar formada, desenvolvedores de tecnologia educacional. Nosso time é movido pela missão de tornar o aprendizado mais eficiente, acessível e inteligente, com base em evidências científicas e boas práticas pedagógicas.</p>
+    </div>
+    <img src="{{ url_for('static', filename='Imgs/Mascote.png') }}" alt="Mascote" class="mascote">
+  </div>
+</section>
+
+    <section class="parte3" id="interesses">
+  <div class="features-container">
+    <div class="features-header">
+      <h2>Por que escolher a <span class="gradient-text">Learn Master</span>?</h2>
+      <p class="features-desc">
+        Nossa plataforma foi desenvolvida com base em pesquisas científicas sobre aprendizado e memória.
+      </p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="{{ url_for('static', filename='Imgs/brain-icon.png') }}" alt="Memorização Inteligente">
+        </div>
+        <h3 class="feature-title">Memorização Inteligente</h3>
+        <p class="feature-description">
+          Algoritmos avançados otimizam a repetição espaçada para maximizar a retenção de informações.
+        </p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/{{ url_for('static', filename='Imgs/progress-icon.png') }}" alt="Progresso Visível">
+        </div>
+        <h3 class="feature-title">Progresso Visível</h3>
+        <p class="feature-description">
+          Acompanhe seu avanço com métricas detalhadas e celebre cada conquista no seu aprendizado.
+        </p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="/static/Imgs/speed-icon.jpg" alt="Aprendizado Rápido">
+        </div>
+        <h3 class="feature-title">Aprendizado Rápido</h3>
+        <p class="feature-description">
+          Estude de forma eficiente com sessões otimizadas que se adaptam ao seu ritmo e disponibilidade.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="parte4 flashcards-section" id="flashcards">
+  <h2 class="exemplo1">Exemplo de Flashcard de Memorização</h2>
+  <div class="flashcards-container">
+    <div class="flashcard" id="flashcard">
+      <div class="flashcard-inner" id="flashcard-inner">
+        <div class="flashcard-front" id="flashcard-front">
+          O que significa memorização ativa?
+        </div>
+        <div class="flashcard-back" id="flashcard-back">
+          É o processo de lembrar informações ativamente, testando a si mesmo em vez de apenas reler.
+        </div>
+      </div>
+    </div>
+    <div class="flashcard-buttons">
+      <button id="flip-btn">Virar</button>
+    </div>
+  </div>
+</section>
+
+      
+        
+<script src="{{ url_for('static', filename='jslanding.js') }}"></script>
+</body>
+</html>

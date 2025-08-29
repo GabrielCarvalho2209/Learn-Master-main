@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnMaster</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header>
+        <div class="logo">LearnMaster</div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="intro">
+            <div class="intro-text">
+                <h1>Crie agora mesmo o seu LearnCard!</h1>
+                <p>Memorize mais rápido e de forma duradoura com o método de Flashcards,
+                     o mais eficaz para estudos acadêmicos</p>
+                <button id="createBtn" type="button">Crie seu flashcard</button>
+                <button id="viewBtn" type="button">Ver seus flashcards</button>
+            </div>
+            <div class="deck-info-card">
+                <div class="card-bg"></div> <!-- Fundo do conteúdo -->
+                <div class="deck-image-container">
+                    <img src="/Imgs/LearnDeck.png" alt="Imagem do Deck" class="deck-image">
+                </div>
+                <div class="deck-info-content">
+                    <div class="deck-title-row">
+                        <span class="deck-title" id="deckTitle">Ingles</span>
+                        <div class="learndeck-tag">LearnDeck</div>
+                    </div>
+                    <div class="deck-description-row">
+                        <img src="/Imgs/cardsvermelho.png" alt="Cards" class="cards-image">
+                        <span class="deck-description">214 de 214 a estudar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

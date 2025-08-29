@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Flashcard</title>
+    <link rel="stylesheet" href="Criação.css">
+</head>
+<body>
+    <main>
+        <div class="criar-layout">
+            <div class="criar-esquerda">
+                <h1>O que vamos memorizar hoje?</h1>
+                <h2>Crie e escolha o seu deck, e depois é só fazer o seu LearnCard!</h2>
+                <div class="deck-form">
+                    <label for="deck-input">Nome do Deck:</label>
+                    <input type="text" id="deck-input" placeholder="Digite o nome do deck">
+                    <button id="addDeckBtn" class="deck-btn">Criar Deck</button>
+                </div>
+                <div class="deck-select-row">
+                    <label for="deck-select">Selecione o Deck:</label>
+                    <select id="deck-select">
+                        <option value="">Nenhum deck criado</option>
+                    </select>
+                </div>
+                <form id="flashcard-form" class="flashcard-form">
+                    <label for="front-input">Frente do Flashcard:</label>
+                    <textarea id="front-input" placeholder="Digite o conteúdo da frente..." required></textarea>
+                    <label for="back-input">Verso do Flashcard:</label>
+                    <textarea id="back-input" placeholder="Digite o conteúdo do verso..." required></textarea>
+                    <button type="button" class="vizualizar-flashcard-btn" id="vizualizarBtn">Visualizar Flashcard</button>
+                    <button type="submit" class="criar-flashcard-btn" id="criarBtn">Criar Flashcard</button>
+                    <button type="button" class="voltar-btn" onclick="window.location.href='/Index/Index/Index.html'">Voltar</button>
+                </form>
+            </div>
+            <div class="criar-direita">
+                <div class="flashcard-visual" id="flashcardVisual">
+                    <div class="flashcard-face flashcard-front active" id="visualFront">
+                        <span class="flashcard-content" id="visualFrontContent">Frente do flashcard</span>
+                        <span class="face-label">Frente</span>
+                    </div>
+                    <div class="flashcard-face flashcard-back" id="visualBack">
+                        <span class="flashcard-content" id="visualBackContent">Verso do flashcard</span>
+                        <span class="face-label">Verso</span>
+                    </div>
+                </div>
+                <button class="flip-btn" id="flipBtn">Virar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="Criação.js"></script>
+
+</body>
+</html>
