@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Cadastro.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Cadastro.css') }}">
     <title>Cadastro</title>
 </head>
 <body>
@@ -11,22 +11,22 @@
         <div class="cadastro-title">Cadastro</div>
         <div class="input-wrapper">
             <img src="/Imgs/email-icon.png" alt="Email" class="icon-email">
-            <input class="cadastro-input" type="email" id="cadastro-email" placeholder="Email">
+            <input class="cadastro-input" type="email" name = "cadastro-email" id="cadastro-email" placeholder="Email">
         </div>
         <div class="input-wrapper">
             <img src="/Imgs/perfil-icon.png" alt="Usuário" class="icon-user">
-            <input class="cadastro-input" type="text" id="cadastro-user" placeholder="Usuário">
+            <input class="cadastro-input" type="text" name = "cadastro-user" id="cadastro-user" placeholder="Usuário">
         </div>
         <div class="input-wrapper">
             <img src="/Imgs/key-icon.png" alt="Senha" class="icon-senha">
-            <input class="cadastro-input" type="password" id="cadastro-pass" placeholder="Senha">
+            <input class="cadastro-input" type="password" name="cadastro-pass" id="cadastro-pass" placeholder="Senha">
         </div>
         <button class="cadastro-btn" onclick="window.location.href='/Index/Index/Index.html'">Cadastrar</button>
         <div class="cadastro-back-btn-div">
             <a href="/Landingpage/IndexLanding.html" class="cadastro-back-btn">Voltar</a>
         </div>
         <div class="cadastro-account-info">
-            <a href="/Login/Login.html" class="cadastro-link">Já possui uma conta?</a>
+            <a href="{{ url_for('login') }}" class="cadastro-link">Já possui uma conta?</a>
         </div>
     </div>
 </body>
